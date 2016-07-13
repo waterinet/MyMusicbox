@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/music_list_music_attr"
+          android:title="音乐信息">
+      
+    </item>
+    <item android:id="@+id/music_list_remove_music" 
+          android:title="从播放列表删除" 
+          android:visible="false"> 
+    </item>
+    <item android:id="@+id/music_list_delete"
+          android:title="删除">
+          
+         
+    </item>
+
+</menu>

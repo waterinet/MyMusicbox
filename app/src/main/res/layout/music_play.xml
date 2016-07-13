@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/back"
+        android:background="@null"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:onClick="doClick"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/back"/>
+   
+    <TableLayout
+        android:id="@+id/musicInfo"
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/back"
+        android:layout_marginTop="10dp">
+        <!-- title --> 
+        <TableRow>
+            <com.slowalker.musicbox.view.AutoScrollTextView
+		        android:id="@+id/title"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="10dp"
+		        android:textSize="25dp"
+		        android:ellipsize="marquee"
+		        android:singleLine="true" />
+        </TableRow>
+        <!-- artist --> 
+        <TableRow>
+            <TextView 
+			   android:id="@+id/artist"
+			   android:layout_marginLeft="12dp"
+			   android:layout_marginTop="5dp"
+			   android:layout_width="match_parent"
+			   android:layout_height="wrap_content"
+			   android:textSize="15dp"
+			   android:singleLine="true"/>
+        </TableRow>
+        <!-- album -->
+        <TableRow>
+            <TextView  
+			   android:id="@+id/album"
+			   android:layout_marginLeft="12dp"
+			   android:layout_marginTop="5dp"
+			   android:layout_width="match_parent"
+			   android:layout_height="wrap_content"
+			   android:textSize="15dp"
+			   android:singleLine="true"
+			   android:ellipsize="end"/>
+        </TableRow>
+	  
+    </TableLayout>
+  
+    <ViewFlipper 
+        android:id="@+id/visualFlipper"
+        android:animationCache="true"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/musicInfo"
+        android:layout_marginTop="30dp">
+        
+        <!-- album_art -->
+        <ImageView 
+            android:id="@+id/albumArt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+        <com.slowalker.musicbox.view.LyricView
+	        android:id="@+id/lyric"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"/>
+        <com.slowalker.musicbox.view.VisualizerView
+            android:id="@+id/visual"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"/>
+    </ViewFlipper>
+    
+    <!-- miniLyric view-->
+    <TextView 
+        android:id="@+id/miniLyric"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@id/visualFlipper"
+        android:layout_alignRight="@id/visualFlipper"
+        android:layout_below="@id/visualFlipper"
+        android:layout_marginTop="10dp"
+        android:maxLines="3"/>
+   
+    <RelativeLayout
+        android:id="@+id/play_progress" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="30dp"
+	    android:layout_marginRight="30dp"
+	    android:layout_below="@id/visualFlipper"
+	    android:layout_marginTop="70dp">
+        <SeekBar 
+	        android:id="@+id/musicSeekbar"
+	        android:layout_width="match_parent"
+	        android:layout_height="6dp"
+	        android:thumb="@null"/>
+        <TextView 
+	        android:id="@+id/current_playtime"
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="12dp"
+		    android:layout_marginTop="2dp"
+		    android:layout_alignLeft="@id/musicSeekbar"
+		    android:layout_below="@id/musicSeekbar"/>
+        <TextView 
+		    android:id="@+id/duration"
+			android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="12dp"
+	        android:layout_marginTop="2dp"
+	        android:layout_alignRight="@id/musicSeekbar"
+			android:layout_below="@id/musicSeekbar"/>
+    </RelativeLayout>
+    <!-- playing progress -->
+    
+   
+    <!-- buttons -->
+    <ImageButton 
+        android:id="@+id/previous"
+	    android:layout_width="40dp"  
+	    android:layout_height="40dp"
+	    android:scaleType="fitXY"
+	    android:background="@null"
+	    android:onClick="doClick"
+	    android:layout_marginLeft="80dp"
+	    android:layout_marginBottom="15dp"
+	    android:layout_alignParentBottom="true"
+	    android:src="@drawable/previous"/>
+    <ImageButton 
+        android:id="@+id/playBtn"
+    	android:layout_width="50dp"  
+	    android:layout_height="50dp"
+	    android:scaleType="fitXY"
+   		android:background="@null"
+    	android:onClick="doClick"
+    	android:layout_marginBottom="10dp"
+    	android:layout_centerHorizontal="true"
+    	android:layout_alignParentBottom="true"
+    	android:src="@drawable/play"/>
+    <ImageButton 
+        android:id="@+id/pauseBtn"
+	    android:layout_width="50dp"  
+	    android:layout_height="50dp"
+	    android:scaleType="fitXY"
+	    android:background="@null"
+	    android:onClick="doClick"
+	    android:layout_marginBottom="10dp"
+	    android:layout_centerHorizontal="true"
+	    android:layout_alignParentBottom="true"
+	    android:src="@drawable/pause"/>
+    <ImageButton 
+        android:id="@+id/next"
+	    android:layout_width="40dp"  
+	    android:layout_height="40dp"
+	    android:scaleType="fitXY"
+	    android:background="@null"
+	    android:onClick="doClick"  
+	    android:src="@drawable/next"
+	    android:layout_marginRight="80dp"
+	    android:layout_marginBottom="15dp"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentBottom="true"/>
+    <!-- current list -->
+    <ImageButton 
+        android:id="@+id/currentList"
+	    android:layout_width="30dp"  
+	    android:layout_height="30dp"
+	    android:scaleType="fitXY"
+	    android:background="@null"
+	    android:onClick="doClick"  
+	    android:src="@drawable/current_list"
+	    android:layout_alignRight="@id/play_progress" 
+	    android:layout_marginBottom="20dp"
+	    android:layout_alignParentBottom="true"/>
+    <!-- play mode -->
+    <ImageButton 
+        android:id="@+id/playMode"
+	    android:layout_width="30dp"  
+	    android:layout_height="30dp"
+	    android:scaleType="fitXY"
+	    android:background="@null"
+	    android:onClick="doClick"  
+	    android:layout_alignLeft="@id/play_progress" 
+	    android:layout_marginBottom="20dp"
+	    android:layout_alignParentBottom="true"/>
+ </RelativeLayout>

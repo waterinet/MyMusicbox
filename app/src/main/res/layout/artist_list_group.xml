@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+     <TextView
+           android:id="@+id/group_artist"
+           android:layout_width="match_parent"
+           android:layout_height="25dp"
+           android:singleLine="true"
+           android:textSize="18dp"
+           android:gravity="center_vertical"
+           android:layout_marginLeft="40dp"
+           android:ellipsize="marquee"/>
+      <TextView
+           android:id="@+id/group_numOfAlbums"
+           android:layout_width="wrap_content"
+           android:layout_height="15dp"
+           android:singleLine="true"
+           android:textSize="12dp"
+           android:layout_marginLeft="40dp"
+           android:gravity="center_vertical"
+           android:layout_below="@id/group_artist"/>
+      <TextView
+           android:id="@+id/group_numOfTracks"
+           android:layout_width="wrap_content"
+           android:layout_height="15dp"
+           android:singleLine="true"
+           android:textSize="10dp"
+           android:layout_marginLeft="40dp"
+           android:gravity="center_vertical"
+           android:layout_below="@id/group_numOfAlbums"/>
+
+</RelativeLayout>

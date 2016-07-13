@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+     <group android:id="@+id/mGroup_remove_from_pl"> 
+        <item android:id="@+id/mItem_remove_from_pl" 
+            android:orderInCategory="0" 
+            android:title="从播放列表删除" /> 
+        
+    </group> 
+
+</menu>

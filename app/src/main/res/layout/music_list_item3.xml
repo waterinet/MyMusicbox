@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <ImageView 
+	        android:id="@+id/ml_item3_stateLabel"
+	        android:layout_width="20dp"
+		    android:layout_height="20dp"
+		    android:scaleType="fitXY"
+		    android:layout_marginLeft="5dp"
+		    android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/ml_item3_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="25dp"
+	        android:singleLine="true"
+	        android:layout_toRightOf="@id/ml_item3_stateLabel"
+	        android:textSize="18dp"
+	        android:layout_marginLeft="5dp"
+	        android:gravity="center_vertical"
+	        android:ellipsize="marquee"/>
+        <TextView
+            android:id="@+id/ml_item3_artist"
+	        android:layout_width="wrap_content"
+	        android:layout_height="15dp"
+	        android:singleLine="true"
+	        android:textSize="10dp"
+	        android:layout_marginLeft="5dp"
+	        android:gravity="center_vertical"
+	        android:layout_toRightOf="@id/ml_item3_stateLabel"
+	        android:layout_below="@+id/ml_item3_title"/>
+        
+  </RelativeLayout>

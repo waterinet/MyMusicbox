@@ -21,7 +21,7 @@ public class EqPresetDialog {
 	public Dialog create()
 	{
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
-		builder.setTitle("音效设置");
+		builder.setTitle("闊虫晥璁剧疆");
 		builder.setSingleChoiceItems(items, getCheckedItem(), 
 				                             new DialogInterface.OnClickListener() 
 		{    
@@ -30,7 +30,7 @@ public class EqPresetDialog {
 				setCheckedItem(item);  
 			}
 		});
-		builder.setPositiveButton("确定", new OnClickListener()
+		builder.setPositiveButton("纭畾", new OnClickListener()
 		{
 
 			@Override
